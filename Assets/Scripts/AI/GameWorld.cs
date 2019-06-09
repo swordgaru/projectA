@@ -31,8 +31,10 @@ namespace Ting.AI
             for (int a = 0; a < AIConfig.NumAgents; ++a)
             {
                 //determine a random starting position
-                Vector2D SpawnPos = new Vector2D(cx / 2.0 + Utils.RandomClamped() * cx / 2.0,
-                        cy / 2.0 + Utils.RandomClamped() * cy / 2.0);
+                double rand1 = Utils.RandomClamped();
+                double rand2 = Utils.RandomClamped();
+                Vector2D SpawnPos = new Vector2D(cx / 2.0 + rand1 * cx / 2.0,
+                        cy / 2.0 + rand2 * cy / 2.0);
 
 
                 Vehicle pVehicle = new Vehicle(this,

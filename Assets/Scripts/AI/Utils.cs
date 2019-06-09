@@ -89,7 +89,7 @@ namespace Ting.AI
         }
 
         static private System.Random rand = new System.Random();
-        static private Int16 RAND_MAX = 0x7fff;
+        static private int RAND_MAX = 0x7fff;
 
         //returns a random integer between x and y
         static public int RandInt(int x, int y)
@@ -101,7 +101,7 @@ namespace Ting.AI
         //returns a random double between zero and 1
         static public double RandFloat()
         {
-            return rand.NextDouble() / (RAND_MAX + 1.0);
+            return rand.Next(RAND_MAX) / (RAND_MAX + 1.0);
         }
 
         static public double RandInRange(double x, double y)
